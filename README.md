@@ -11,7 +11,7 @@ yarn v-pin-input
 npm v-pin-input
 ```
 
-## Run tests
+## Usage
 ```ts
 import { createApp } from 'vue'
 import App from './App.vue'
