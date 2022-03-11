@@ -1,5 +1,5 @@
 {
-  "name": "vue-pin-input",
+  "name": "v-pin-input",
   "version": "0.0.3",
   "main": "./dist/index.es.js",
   "module": "./dist/index.es.js",
