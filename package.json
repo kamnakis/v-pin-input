@@ -28,5 +28,25 @@
     "vite": "^2.8.0",
     "vite-plugin-dts": "^0.9.9",
     "vue-tsc": "^0.29.8"
-  }
+  },
+  "author": {
+    "name": "Stelios Kamnakis",
+    "email": "kamnis1997@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamnakis/v-pin-input.git"
+  },
+  "keywords": [
+    "vue",
+    "vue 3",
+    "vuejs",
+    "pin",
+    "input",
+    "pin-input",
+    "multiple-input",
+    "otp input",
+    "transaction pin",
+    "one time password"
+  ]
 }
