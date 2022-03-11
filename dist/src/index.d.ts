@@ -1,6 +1,4 @@
-import { App } from "vue";
+import { Plugin } from "vue";
 export type { Cell, CellInputType, CellsInputTypes } from './types/types';
-declare const PinInput: {
-    install: (app: App, options?: {}) => void;
-};
+declare const PinInput: Plugin;
 export default PinInput;
