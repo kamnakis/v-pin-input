@@ -70,3 +70,6 @@ const handleCompleted = (val: string) => {
 }
 </style>
 ```
+
+## References
+This is pretty much a combination of [vue-split-input](https://github.com/dammy001/vue-split-input) and [vue-pincode-input](https://github.com/Seokky/vue-pincode-input)
