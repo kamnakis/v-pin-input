@@ -1,4 +1,6 @@
+node_modules
+.DS_Store
+dist-ssr
+*.local
+.npmrc
 src
-.vscode
-index.html
-README.md
