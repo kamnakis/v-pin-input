@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import PinInput from './components/PinInput.vue'
 
-const a = ref('')
+const model = ref('')
 
 const handleCompleted = (val: string) => {
   console.log('Completed', val)
@@ -10,17 +9,21 @@ const handleCompleted = (val: string) => {
 </script>
 
 <template>
-  <PinInput v-model="a" :length="6" autofocus input-class="pinInput" @completed="handleCompleted" />
+  <div class="wrapper">
+    <pin-input
+      v-model="model"
+      :length="6"
+      autofocus
+      input-class="pinInput"
+      @completed="handleCompleted"
+    />
+  </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.wrapper {
+  display: flex;
+  gap: 4px;
 }
 
 .pinInput {

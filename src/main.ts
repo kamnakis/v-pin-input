@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import App from './example/App.vue'
 
-createApp(App).mount('#app')
+import PinInput from './index'
+createApp(App).use(PinInput).mount('#app')
