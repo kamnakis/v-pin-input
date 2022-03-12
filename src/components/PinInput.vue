@@ -1,17 +1,19 @@
 <template>
-  <input
-    v-for="(cell, index) in cells"
-    :key="cell.key"
-    :ref="el => setRef(`${baseRefName}${index}`, el)"
-    v-model.trim="cell.value"
-    v-bind="$attrs"
-    :class="`${inputClass}`"
-    :type="cellsInputTypes[index]"
-    @focus="focusedCellIdx = index"
-    @keydown.delete="onCellErase(index, $event)"
-    @keydown="onKeyDown"
-    @paste="onPaste(index, $event)"
-  >
+  <div>
+    <input
+      v-for="(cell, index) in cells"
+      :key="cell.key"
+      :ref="el => setRef(`${baseRefName}${index}`, el)"
+      v-model.trim="cell.value"
+      v-bind="$attrs"
+      :class="`${inputClass}`"
+      :type="cellsInputTypes[index]"
+      @focus="focusedCellIdx = index"
+      @keydown.delete="onCellErase(index, $event)"
+      @keydown="onKeyDown"
+      @paste="onPaste(index, $event)"
+    >
+  </div>
 </template>
 
 <script lang="ts" setup>
