@@ -158,30 +158,32 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       focusedCellIdx.value = index;
     };
     return (_ctx, _cache) => {
-      return openBlock(true), createElementBlock(Fragment, null, renderList(cells.value, (cell, index) => {
-        return withDirectives((openBlock(), createElementBlock("input", mergeProps({
-          key: cell.key,
-          ref_for: true,
-          ref: (el) => setRef(`${baseRefName.value}${index}`, el),
-          "onUpdate:modelValue": ($event) => cell.value = $event
-        }, _ctx.$attrs, {
-          class: `${__props.inputClass}`,
-          type: cellsInputTypes.value[index],
-          onFocus: ($event) => focusedCellIdx.value = index,
-          onKeydown: [
-            withKeys(($event) => onCellErase(index, $event), ["delete"]),
-            onKeyDown
-          ],
-          onPaste: ($event) => onPaste(index, $event)
-        }), null, 16, _hoisted_1)), [
-          [
-            vModelDynamic,
-            cell.value,
-            void 0,
-            { trim: true }
-          ]
-        ]);
-      }), 128);
+      return openBlock(), createElementBlock("div", null, [
+        (openBlock(true), createElementBlock(Fragment, null, renderList(cells.value, (cell, index) => {
+          return withDirectives((openBlock(), createElementBlock("input", mergeProps({
+            key: cell.key,
+            ref_for: true,
+            ref: (el) => setRef(`${baseRefName.value}${index}`, el),
+            "onUpdate:modelValue": ($event) => cell.value = $event
+          }, _ctx.$attrs, {
+            class: `${__props.inputClass}`,
+            type: cellsInputTypes.value[index],
+            onFocus: ($event) => focusedCellIdx.value = index,
+            onKeydown: [
+              withKeys(($event) => onCellErase(index, $event), ["delete"]),
+              onKeyDown
+            ],
+            onPaste: ($event) => onPaste(index, $event)
+          }), null, 16, _hoisted_1)), [
+            [
+              vModelDynamic,
+              cell.value,
+              void 0,
+              { trim: true }
+            ]
+          ]);
+        }), 128))
+      ]);
     };
   }
 });
