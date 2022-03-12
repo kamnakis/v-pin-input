@@ -2,6 +2,9 @@
 
 Vue Pin Input is a Vue 3 input component for pins, otp etc.
 
+Here is a live [demo](https://kamnakis.github.io/v-pin-input-demo/)
+
+
 ## Installation
 
 
@@ -10,6 +13,7 @@ yarn v-pin-input
 # or
 npm v-pin-input
 ```
+
 
 ## Plugin installation
 ```ts
@@ -70,6 +74,7 @@ const handleCompleted = (val: string) => {
 </style>
 ```
 
+
 ### Props
 | Property              | Type       | Default  | Description |
 | :-------------------- | :--------- | :------- | :---------- |
@@ -78,6 +83,7 @@ const handleCompleted = (val: string) => {
 | `secure`       | `boolean`     | `false`   | Display * instead of character |
 | `characterPreview`       | `boolean`     | `true`   | Display character before switch to * in secure mode |
 | `charPreviewDuration`       | `number`     | `300`   | Ms to show the character before switch back to * |
+
 
 ### Events
 | Name                  | Payload              | Description |
