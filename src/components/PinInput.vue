@@ -12,6 +12,7 @@
       @keydown.delete="onCellErase(index, $event)"
       @keydown="onKeyDown"
       @paste="onPaste(index, $event)"
+      @input="onInput(index, $event)"
     >
   </div>
 </template>
@@ -174,6 +175,23 @@ const onPaste = (pasteIdx: number, e: ClipboardEvent) => {
     if (pasteValues[j] === undefined || cells.value[i] === undefined) break;
     cells.value[i].value = pasteValues[j]
     j++
+  }
+}
+
+const onInput = (pasteIdx: number, ev: Event) => {
+  const e = ev as InputEvent
+  console.log(e.data)
+  alert(e.data)
+  if (e.data?.length === props.length) {
+    e.preventDefault()
+    const pasteValues: string[] = (e.data.toString()).split('')
+    
+    let j = 0
+    for (let i = pasteIdx; i < pasteIdx + pasteValues.length; i++) {
+      if (pasteValues[j] === undefined || cells.value[i] === undefined) break;
+      cells.value[i].value = pasteValues[j]
+      j++
+    }
   }
 }
 

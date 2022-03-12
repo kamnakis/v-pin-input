@@ -10,7 +10,7 @@
     "dist/index.umd.js"
   ],
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 0.0.0.0",
     "build": "vue-tsc --noEmit && vite build",
     "share": "npm version patch && npm run build && npm publish"
   },
