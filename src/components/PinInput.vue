@@ -180,8 +180,6 @@ const onPaste = (pasteIdx: number, e: ClipboardEvent) => {
 
 const onInput = (pasteIdx: number, ev: Event) => {
   const e = ev as InputEvent
-  console.log(e.data)
-  alert(e.data)
   if (e.data?.length === props.length) {
     e.preventDefault()
     const pasteValues: string[] = (e.data.toString()).split('')
