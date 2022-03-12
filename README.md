@@ -71,5 +71,20 @@ const handleCompleted = (val: string) => {
 </style>
 ```
 
+### Props
+| Property              | Type       | Default  | Description |
+| :-------------------- | :--------- | :------- | :---------- |
+| `length` | `number`     | `4`   | The amount of the inputs |
+| `autofocus`       | `boolean`     | `true`   | Autofocus on first input on component load. |
+| `secure`       | `boolean`     | `false`   | Display * instead of character |
+| `characterPreview`       | `boolean`     | `true`   | Display character before switch to * in secure mode |
+| `charPreviewDuration`       | `number`     | `300`   | Ms to show the character before switch back to * |
+
+### Events
+| Name                  | Payload              | Description |
+| :-------------------- | :--------- | :---------- |
+| `completed`           | `string`             | Called once the user completes the input (fills the last empty input) |
+
+
 ## References
 This is pretty much a combination of [vue-split-input](https://github.com/dammy001/vue-split-input) and [vue-pincode-input](https://github.com/Seokky/vue-pincode-input)
