@@ -1,5 +1,5 @@
 import { defineComponent, ref, computed, watch, onMounted, nextTick, openBlock, createElementBlock, Fragment, renderList, withDirectives, mergeProps, withKeys, vModelDynamic } from "vue";
-const _hoisted_1 = ["onUpdate:modelValue", "type", "onFocus", "onKeydown", "onPaste"];
+const _hoisted_1 = ["onUpdate:modelValue", "type", "onFocus", "onKeydown", "onPaste", "onInput"];
 const _sfc_main = /* @__PURE__ */ defineComponent({
   props: {
     modelValue: null,
@@ -120,6 +120,23 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         j++;
       }
     };
+    const onInput = (pasteIdx, ev) => {
+      var _a;
+      const e = ev;
+      console.log(e.data);
+      alert(e.data);
+      if (((_a = e.data) == null ? void 0 : _a.length) === props.length) {
+        e.preventDefault();
+        const pasteValues = e.data.toString().split("");
+        let j = 0;
+        for (let i = pasteIdx; i < pasteIdx + pasteValues.length; i++) {
+          if (pasteValues[j] === void 0 || cells.value[i] === void 0)
+            break;
+          cells.value[i].value = pasteValues[j];
+          j++;
+        }
+      }
+    };
     const reset = () => {
       unwatchCells();
       init();
@@ -173,7 +190,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               withKeys(($event) => onCellErase(index, $event), ["delete"]),
               onKeyDown
             ],
-            onPaste: ($event) => onPaste(index, $event)
+            onPaste: ($event) => onPaste(index, $event),
+            onInput: ($event) => onInput(index, $event)
           }), null, 16, _hoisted_1)), [
             [
               vModelDynamic,

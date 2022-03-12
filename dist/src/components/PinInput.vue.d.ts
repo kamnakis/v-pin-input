@@ -74,6 +74,7 @@ declare const _sfc_main: import("vue").DefineComponent<{
     onCellErase: (index: number, e: Event) => void;
     onKeyDown: (e: KeyboardEvent) => void;
     onPaste: (pasteIdx: number, e: ClipboardEvent) => void;
+    onInput: (pasteIdx: number, ev: Event) => void;
     reset: () => void;
     unwatchCells: () => void;
     isTheCellValid: (cell: string, allowEmpty?: boolean) => boolean;
