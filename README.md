@@ -37,15 +37,14 @@ const handleCompleted = (val: string) => {
 </script>
 
 <template>
-  <div class="wrapper">
-    <pin-input
-      v-model="model"
-      :length="6"
-      autofocus
-      input-class="pinInput"
-      @completed="handleCompleted"
-    />
-  </div>
+  <pin-input
+    class="wrapper"
+    v-model="model"
+    :length="6"
+    autofocus
+    input-class="pinInput"
+    @completed="handleCompleted"
+  />
 </template>
 
 <style>
