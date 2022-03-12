@@ -123,8 +123,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const onInput = (pasteIdx, ev) => {
       var _a;
       const e = ev;
-      console.log(e.data);
-      alert(e.data);
       if (((_a = e.data) == null ? void 0 : _a.length) === props.length) {
         e.preventDefault();
         const pasteValues = e.data.toString().split("");
