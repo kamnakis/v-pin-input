@@ -4,7 +4,7 @@ Vue Pin Input is a Vue 3 input component for pins, otp etc.
 
 Here is a live [demo](https://kamnakis.github.io/v-pin-input-demo/)
 
-![demo image](https://ibb.co/VT8yF05)
+![demo image](https://i.ibb.co/JHPLYWg/image.png)
 
 
 ## Installation
