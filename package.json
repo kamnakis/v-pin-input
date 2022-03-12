@@ -45,5 +45,6 @@
     "otp input",
     "transaction pin",
     "one time password"
-  ]
+  ],
+  "license": "MIT"
 }
