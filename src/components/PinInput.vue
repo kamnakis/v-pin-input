@@ -34,6 +34,7 @@ interface Props {
   characterPreview?: boolean
   charPreviewDuration?: number
   inputClass?: string
+  blurOnComplete?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -41,7 +42,8 @@ const props = withDefaults(defineProps<Props>(), {
   autofocus: true,
   secure: false,
   characterPreview: true,
-  charPreviewDuration: 300
+  charPreviewDuration: 300,
+  blurOnComplete: false
 })
 
 const emit = defineEmits(['update:modelValue', 'completed'])
@@ -75,6 +77,7 @@ watch(pinCodeComputed, (val, oldVal) => {
   emit('update:modelValue', val)
   if (oldVal.length !== props.length && val.length === props.length) {
     emit('completed', val)
+    props.blurOnComplete && refs.value[`${baseRefName.value}${focusedCellIdx.value}`]?.blur()
   }
 })
 
