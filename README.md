@@ -85,6 +85,7 @@ const handleCompleted = (val: string) => {
 | `secure`       | `boolean`     | `false`   | Display * instead of character |
 | `characterPreview`       | `boolean`     | `true`   | Display character before switch to * in secure mode |
 | `charPreviewDuration`       | `number`     | `300`   | Ms to show the character before switch back to * |
+| `blurOnComplete`       | `boolean`     | `false`   | true if you want to blur the input when completed |
 
 
 ### Events

@@ -8,7 +8,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     secure: { type: Boolean, default: false },
     characterPreview: { type: Boolean, default: true },
     charPreviewDuration: { default: 300 },
-    inputClass: null
+    inputClass: null,
+    blurOnComplete: { type: Boolean, default: false }
   },
   emits: ["update:modelValue", "completed"],
   setup(__props, { emit }) {
@@ -38,9 +39,11 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       reset();
     });
     watch(pinCodeComputed, (val, oldVal) => {
+      var _a;
       emit("update:modelValue", val);
       if (oldVal.length !== props.length && val.length === props.length) {
         emit("completed", val);
+        props.blurOnComplete && ((_a = refs.value[`${baseRefName.value}${focusedCellIdx.value}`]) == null ? void 0 : _a.blur());
       }
     });
     onMounted(() => {

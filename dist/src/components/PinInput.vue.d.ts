@@ -33,6 +33,11 @@ declare const _sfc_main: import("vue").DefineComponent<{
         type: StringConstructor;
         required: false;
     };
+    blurOnComplete: {
+        type: BooleanConstructor;
+        required: false;
+        default: boolean;
+    };
 }, {
     BASE_REF_NAME: string;
     CELL_REGEXP: string;
@@ -46,6 +51,7 @@ declare const _sfc_main: import("vue").DefineComponent<{
         characterPreview: boolean;
         charPreviewDuration: number;
         inputClass?: string | undefined;
+        blurOnComplete: boolean;
     };
     emit: (event: "update:modelValue" | "completed", ...args: any[]) => void;
     baseRefName: import("vue").Ref<string>;
@@ -116,6 +122,11 @@ declare const _sfc_main: import("vue").DefineComponent<{
         type: StringConstructor;
         required: false;
     };
+    blurOnComplete: {
+        type: BooleanConstructor;
+        required: false;
+        default: boolean;
+    };
 }>> & {
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
     onCompleted?: ((...args: any[]) => any) | undefined;
@@ -125,5 +136,6 @@ declare const _sfc_main: import("vue").DefineComponent<{
     secure: boolean;
     characterPreview: boolean;
     charPreviewDuration: number;
+    blurOnComplete: boolean;
 }>;
 export default _sfc_main;
