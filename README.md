@@ -11,9 +11,9 @@ Here is a live [demo](https://kamnakis.github.io/v-pin-input-demo/)
 
 
 ```bash
-yarn v-pin-input
+yarn add v-pin-input
 # or
-npm v-pin-input
+npm i v-pin-input
 ```
 
 
