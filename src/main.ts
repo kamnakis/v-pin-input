@@ -1,5 +1,5 @@
-import { createApp } from 'vue'
-import App from './example/App.vue'
+import { createApp } from "vue";
+import App from "./example/App.vue";
+import PinInputPlugin from "./index";
 
-import PinInput from './index'
-createApp(App).use(PinInput).mount('#app')
+createApp(App).use(PinInputPlugin).mount("#app");
