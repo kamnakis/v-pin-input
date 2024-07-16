@@ -34,6 +34,7 @@ app.mount('#app')
 ```vue
 <script setup lang="ts">
 import { ref } from 'vue'
+import {PinInput} from 'v-pin-input';
 
 const model = ref('')
 
